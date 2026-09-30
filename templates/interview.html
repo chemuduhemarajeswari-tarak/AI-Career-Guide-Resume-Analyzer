@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Interview Prep{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>Interview Preparation</h2>
+    <form id="interview-start-form" data-endpoint="/api/interview/start">
+        <label>Target Role<input name="target_role" value="Python Developer"></label>
+        <button class="button primary" type="submit">Start Mock Interview</button>
+    </form>
+    <div id="interview-output" class="result-box"></div>
+</section>
+{% endblock %}

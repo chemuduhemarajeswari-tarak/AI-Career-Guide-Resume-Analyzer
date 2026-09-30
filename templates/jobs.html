@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Jobs{% endblock %}
+{% block content %}
+<section class="card">
+    <h2>Job Portals & Search Keywords</h2>
+    <div id="jobs-output" class="result-box">Job portal suggestions and search keywords are ready to load.</div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+fetch('/api/jobs').then(r => r.json()).then(data => {
+  const output = document.getElementById('jobs-output');
+  output.innerHTML = '<h3>Recommended portals</h3>' + data.portals.map(portal => `
+    <div class="list-item"><strong>${portal.portal}</strong> - ${portal.purpose}<br><small>${portal.keywords.join(', ')}</small><br><a href="${portal.official_url}" target="_blank">Official link</a></div>
+  `).join('');
+});
+</script>
+{% endblock %}

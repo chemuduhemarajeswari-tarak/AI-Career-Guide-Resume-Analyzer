@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}AI Career Guide{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">AI Career Guide</div>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/career">Career Guide</a>
+          <a href="/resume">Resume Analyzer</a>
+          <a href="/job-analyzer">Job Analyzer</a>
+          <a href="/skill-gap">Skill Gap</a>
+          <a href="/projects">Projects</a>
+          <a href="/interview">Interview Prep</a>
+          <a href="/career-twin">Career Twin</a>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/history">History</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container page-content">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+      <div class="container">AI Career Guide & Resume Analyzer</div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

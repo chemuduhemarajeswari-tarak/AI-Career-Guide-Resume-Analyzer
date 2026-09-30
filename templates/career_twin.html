@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Career Twin{% endblock %}
+{% block content %}
+<section class="card">
+    <h2>My Career Twin</h2>
+    <div id="career-twin-output" class="result-box">Career twin status will appear here.</div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+fetch('/api/career-twin').then(r => r.json()).then(data => {
+  const twin = data.twin;
+  const output = document.getElementById('career-twin-output');
+  output.innerHTML = `<h3>${twin.target_role}</h3><p>Skills: ${twin.skills_alignment}% aligned</p><p>Projects: ${twin.projects}</p><p>Resume: ${twin.resume_status} ATS</p><p>Interview: ${twin.interview_status}%</p><p>Skill Gaps: ${twin.skill_gaps}</p><ul>${twin.next_actions.map(item => '<li>' + item + '</li>').join('')}</ul>`;
+});
+</script>
+{% endblock %}

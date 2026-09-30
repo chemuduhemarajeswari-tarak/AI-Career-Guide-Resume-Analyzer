@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}History{% endblock %}
+{% block content %}
+<section class="card">
+    <h2>Career History</h2>
+    <div class="history-block">
+        <h3>Career plans</h3>
+        <pre>{{ history.career_plans | tojson(indent=2) }}</pre>
+        <h3>Resume history</h3>
+        <pre>{{ history.resume_history | tojson(indent=2) }}</pre>
+        <h3>Interview history</h3>
+        <pre>{{ history.interviews | tojson(indent=2) }}</pre>
+    </div>
+</section>
+{% endblock %}

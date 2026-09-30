@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Resume Analyzer{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>Resume Analyzer</h2>
+    <form id="resume-form" enctype="multipart/form-data" data-endpoint="/api/resume/analyze">
+        <div class="grid two-col">
+            <label>Upload Resume<input type="file" name="resume_file" accept=".pdf,.docx,.txt" required></label>
+            <label>Target Role<select name="target_role"><option>Software Developer</option><option>Web Developer</option><option>Python Developer</option><option>Data Analyst</option><option>Data Scientist</option><option>AI/ML Engineer</option><option>Frontend Developer</option><option>Backend Developer</option></select></label>
+        </div>
+        <button class="button primary" type="submit">Analyze Resume</button>
+    </form>
+    <div id="resume-output" class="result-box"></div>
+</section>
+{% endblock %}
