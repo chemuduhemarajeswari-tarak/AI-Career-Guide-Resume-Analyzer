@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>Recommend Projects For Me</h2>
+    <form id="projects-form" data-endpoint="/api/projects/recommend">
+        <div class="grid two-col">
+            <label>Target Role<input name="target_role" value="Python Developer"></label>
+            <label>Current Skills<input name="current_skills" value="Python, SQL"></label>
+            <label>Missing Skills<input name="missing_skills" value="Flask, REST API, SQL"></label>
+            <label>Skill Level<select name="skill_level"><option>Beginner</option><option selected>Intermediate</option><option>Advanced</option></select></label>
+        </div>
+        <button class="button primary" type="submit">Recommend Projects</button>
+    </form>
+    <div id="projects-output" class="result-box"></div>
+</section>
+{% endblock %}

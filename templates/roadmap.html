@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Roadmap{% endblock %}
+{% block content %}
+<section class="card">
+    <h2>30-Day Roadmap</h2>
+    <div class="progress-block">
+        <div class="progress-label">Progress</div>
+        <div class="progress-bar"><span id="roadmap-progress-bar" style="width: {{ progress.percentage }}%"></span></div>
+        <div id="roadmap-summary">{{ progress.completed_days }} / 30 Days Completed</div>
+    </div>
+    <div class="two-col-grid">
+        <div class="card nested">
+            <h3>Daily Career Challenge</h3>
+            <p id="daily-challenge">Write a short explanation of how you would solve a real-world problem using your target skill set.</p>
+            <button class="button primary" type="button" id="completeChallengeBtn">Complete Challenge</button>
+        </div>
+        <div class="card nested">
+            <h3>Adapt My Roadmap</h3>
+            <form id="roadmap-adapt-form">
+                <label>Completed Days<input type="number" id="completed_days" value="0" min="0" max="30"></label>
+                <label>Missed Days<input type="number" id="missed_days" value="0" min="0" max="30"></label>
+                <label>Available Daily Time<select id="available_time"><option>30 minutes/day</option><option selected>1 hour/day</option><option>2 hours/day</option><option>3+ hours/day</option></select></label>
+                <button class="button secondary" type="submit">Adapt My Roadmap</button>
+            </form>
+        </div>
+    </div>
+    <div id="roadmap-output" class="result-box"></div>
+</section>
+{% endblock %}

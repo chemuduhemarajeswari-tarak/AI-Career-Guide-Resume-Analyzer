@@ -1,0 +1,83 @@
+[
+  {
+    "target_role": "Software Developer",
+    "resume_path": "C:\\Users\\Admin\\Documents\\AICG\\uploads\\resume.pdf",
+    "analysis": {
+      "target_role": "Software Developer",
+      "resume_summary": "Your resume is generally aligned with Software Developer, with a strong focus on python, sql, git.",
+      "matching_skills": [
+        "python",
+        "sql",
+        "git"
+      ],
+      "missing_skills": [
+        "data structures",
+        "algorithms",
+        "rest api",
+        "testing"
+      ],
+      "recommended_skills": [
+        "data structures",
+        "algorithms",
+        "rest api",
+        "testing"
+      ],
+      "recommended_certifications": [
+        "Google Data Analytics",
+        "AWS Cloud Practitioner",
+        "Microsoft Azure Fundamentals"
+      ],
+      "resume_improvement_areas": [
+        "Add measurable achievements for projects and work experience.",
+        "Use clear section headings and target-role keywords.",
+        "Highlight tools and technologies used in each project."
+      ],
+      "ats_score": 43,
+      "ats_breakdown": {
+        "keyword_match": 43,
+        "skills_match": 38,
+        "experience_relevance": 46,
+        "resume_structure": 78,
+        "formatting": 80,
+        "education_certifications": 72
+      },
+      "issues": [
+        {
+          "problem": "Missing key keywords",
+          "why_it_matters": "ATS systems search for exact role-specific keywords.",
+          "how_to_improve": "Add skills that match the job description in a natural, truthful way."
+        },
+        {
+          "problem": "Weak project summaries",
+          "why_it_matters": "Project descriptions help explain practical knowledge.",
+          "how_to_improve": "List tools, responsibilities, and outcomes in short bullet points."
+        },
+        {
+          "problem": "Limited measurable results",
+          "why_it_matters": "Numbers improve credibility and clarity.",
+          "how_to_improve": "Use metrics when they are genuinely available."
+        }
+      ],
+      "keywords": {
+        "present": [
+          "python",
+          "sql",
+          "git"
+        ],
+        "missing": [
+          "data structures",
+          "algorithms",
+          "rest api",
+          "testing"
+        ],
+        "suggested": [
+          "data structures",
+          "algorithms",
+          "rest api",
+          "testing"
+        ]
+      },
+      "demo": false
+    }
+  }
+]

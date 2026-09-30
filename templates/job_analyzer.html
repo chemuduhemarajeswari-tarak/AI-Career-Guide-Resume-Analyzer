@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Job Description Analyzer{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>Analyze Job Description</h2>
+    <form id="job-analysis-form" data-endpoint="/api/job-description/analyze">
+        <label>Paste job description<textarea name="job_description" rows="8" placeholder="Paste the job description here..."></textarea></label>
+        <label>Resume text (optional)<textarea name="resume_text" rows="6" placeholder="Paste your resume summary or skills section if available..."></textarea></label>
+        <button class="button primary" type="submit">Analyze Job Match</button>
+    </form>
+    <div id="job-analysis-output" class="result-box"></div>
+</section>
+{% endblock %}

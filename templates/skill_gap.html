@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Skill Gap Analyzer{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>Skill Gap Analyzer</h2>
+    <form id="skill-gap-form" data-endpoint="/api/skill-gap">
+        <div class="grid two-col">
+            <label>Target Role<input name="target_role" value="Python Developer"></label>
+            <label>Current Skills<input name="current_skills" placeholder="Python, SQL, Git"></label>
+        </div>
+        <button class="button primary" type="submit">Analyze Skill Gap</button>
+    </form>
+    <div id="skill-gap-output" class="result-box"></div>
+</section>
+{% endblock %}

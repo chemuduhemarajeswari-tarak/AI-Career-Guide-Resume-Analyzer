@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<section class="stats-grid">
+    <div class="card stat-card"><h3>Career Twin</h3><p>65% aligned</p></div>
+    <div class="card stat-card"><h3>Career Readiness</h3><p>78%</p></div>
+    <div class="card stat-card"><h3>Target Role</h3><p>Python Developer</p></div>
+    <div class="card stat-card"><h3>Learning Streak</h3><p>🔥 7 days</p></div>
+</section>
+<div class="card" id="dashboard-output">Dashboard details are loading.</div>
+{% endblock %}
+{% block scripts %}
+<script>
+fetch('/api/dashboard').then(r => r.json()).then(data => {
+  const progress = data.progress;
+  const readiness = data.readiness;
+  const output = document.getElementById('dashboard-output');
+  output.innerHTML = `
+    <h3>AI Career Readiness Indicator</h3>
+    <p>${readiness.note}</p>
+    <ul>
+      <li>Skills: ${readiness.skills}%</li>
+      <li>Resume: ${readiness.resume}%</li>
+      <li>Projects: ${readiness.projects}%</li>
+      <li>Interview: ${readiness.interview}%</li>
+      <li>Roadmap: ${readiness.roadmap}%</li>
+    </ul>
+    <p>Progress: ${progress.completed_days} / 30 days completed</p>
+  `;
+});
+</script>
+{% endblock %}

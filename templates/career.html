@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Career Guide{% endblock %}
+{% block content %}
+<section class="card form-card">
+    <h2>AI Career Guide</h2>
+    <form id="career-form" data-endpoint="/api/career/generate">
+        <div class="grid two-col">
+            <label>Name<input name="name" required></label>
+            <label>Target Role<select name="target_role"><option>Software Developer</option><option>Web Developer</option><option>Python Developer</option><option>Java Developer</option><option>Data Analyst</option><option>Data Scientist</option><option>AI/ML Engineer</option><option>Cloud Engineer</option><option>Cybersecurity Analyst</option><option>Frontend Developer</option><option>Backend Developer</option></select></label>
+            <label>Current Skills<input name="current_skills" placeholder="Python, SQL, Git" required></label>
+            <label>Education<input name="education" placeholder="B.Tech / B.Sc / Diploma"></label>
+            <label>Skill Level<select name="skill_level"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label>
+            <label>Preferred Domain<input name="preferred_domain" placeholder="Software, Data, AI"></label>
+            <label>Available Study Time<select name="study_time"><option>30 minutes/day</option><option>1 hour/day</option><option>2 hours/day</option><option>3+ hours/day</option></select></label>
+            <label>Previous Experience<input name="experience" placeholder="0-2 years"></label>
+            <label>Projects<input name="projects" placeholder="Portfolio, internships, etc."></label>
+        </div>
+        <button class="button primary" type="submit">Generate Career Plan</button>
+    </form>
+    <div id="career-output" class="result-box"></div>
+</section>
+{% endblock %}
