@@ -1,0 +1,10 @@
+[
+  {"name":"MDN Web Docs","platform":"MDN","topic":"Web development","url":"https://developer.mozilla.org/","description":"Reference guides and tutorials for the open web."},
+  {"name":"freeCodeCamp","platform":"freeCodeCamp","topic":"Programming practice","url":"https://www.freecodecamp.org/learn/","description":"Free, hands-on programming curricula."},
+  {"name":"Python Tutorial","platform":"Python.org","topic":"Python","url":"https://docs.python.org/3/tutorial/","description":"The official Python language tutorial."},
+  {"name":"Java Documentation","platform":"Oracle","topic":"Java","url":"https://docs.oracle.com/en/java/","description":"Official Java platform documentation."},
+  {"name":"Microsoft Learn","platform":"Microsoft","topic":"Cloud and data","url":"https://learn.microsoft.com/training/","description":"Free technical learning paths and modules."},
+  {"name":"AWS Skill Builder","platform":"AWS","topic":"Cloud","url":"https://skillbuilder.aws/","description":"Digital cloud training from AWS."},
+  {"name":"Google Cloud Skills Boost","platform":"Google Cloud","topic":"Cloud","url":"https://www.cloudskillsboost.google/","description":"Hands-on Google Cloud training and labs."},
+  {"name":"SQLBolt","platform":"SQLBolt","topic":"SQL","url":"https://sqlbolt.com/","description":"Interactive lessons for learning SQL."}
+]
